@@ -21,7 +21,7 @@
     --ink-850: #101622;
     --ink-800: #151E2E;
 
-    /* Surface Hierarchy (Shared with The Evidence & Hub) */
+    /* Surface Hierarchy */
     --surface-flat: #0E1420;
     --glass-subtle: rgba(16, 23, 36, 0.72);
     --glass-active: rgba(22, 33, 52, 0.88);
@@ -89,7 +89,7 @@
   }
   body.modal-open { overflow: hidden; }
 
-  /* Accessibility: High-Craft Skip to Main Content Link */
+  /* Accessibility: Skip Navigation Link */
   .skip-nav {
     position: absolute;
     top: -100px;
@@ -204,7 +204,6 @@
     text-transform: uppercase;
   }
 
-  /* Desktop Nav Links */
   nav.links {
     display: flex;
     align-items: center;
@@ -355,7 +354,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: clamp(92px, 12vw, 118px) 0 clamp(54px, 8vw, 84px);
+    padding: clamp(84px, 9vh, 104px) 0 clamp(44px, 5vh, 64px);
     border-bottom: 1px solid var(--line);
     overflow: hidden;
   }
@@ -392,16 +391,18 @@
     width: 100%;
   }
   @media(min-width: 980px) {
-    .hero-grid { grid-template-columns: 1.18fr 0.82fr; gap: 46px; }
+    .hero-grid { 
+      grid-template-columns: 1.05fr 0.95fr; 
+      gap: clamp(34px, 4vw, 56px); 
+    }
   }
 
-  /* Ecosystem Flow Pill Tag: Seamless links to Entry Door Hub & Sister Site */
   .ecosystem-flow-tag {
     display: inline-flex;
     align-items: center;
     flex-wrap: wrap;
     gap: 8px;
-    font-size: 0.69rem;
+    font-size: 0.75rem;
     font-weight: 800;
     letter-spacing: 0.06em;
     color: var(--muted-dim);
@@ -411,9 +412,9 @@
     backdrop-filter: var(--glass-blur);
     -webkit-backdrop-filter: var(--glass-blur);
     box-shadow: var(--glass-specular);
-    padding: 5px 14px;
+    padding: 7px 18px;
     border-radius: 999px;
-    margin-bottom: 18px;
+    margin-bottom: 22px;
     max-width: 100%;
     line-height: 1.35;
   }
@@ -431,10 +432,10 @@
 
   .hero-h1 {
     font-family: 'DM Serif Display', Georgia, serif;
-    font-size: clamp(1.45rem, 3.2vw, 2.5rem);
-    line-height: 1.18;
+    font-size: clamp(1.72rem, 3.65vw, 3.12rem);
+    line-height: 1.15;
     color: var(--white);
-    margin-bottom: 18px;
+    margin-bottom: 22px;
     font-weight: 400;
     text-align: left;
     letter-spacing: -0.015em;
@@ -476,7 +477,7 @@
     cursor: pointer;
     text-decoration: underline;
     text-decoration-style: dotted;
-    text-underline-offset: 5px;
+    text-underline-offset: 6px;
     text-decoration-color: rgba(45, 212, 180, 0.65);
     transition: color .2s, text-decoration-color .2s;
   }
@@ -496,39 +497,39 @@
     padding: 0 16px;
   }
   .hero-notebook.open {
-    max-height: 240px;
-    margin-top: 14px;
-    margin-bottom: 18px;
-    padding: 10px 16px;
+    max-height: 260px;
+    margin-top: 16px;
+    margin-bottom: 22px;
+    padding: 14px 20px;
   }
   .hero-notebook-row {
     display: flex;
     align-items: center;
     gap: 12px;
-    font-size: 13.5px;
-    padding: 7px 0;
+    font-size: 14.5px;
+    padding: 9px 0;
     border-bottom: 1px dashed rgba(255, 255, 255, 0.08);
   }
   .hero-notebook-row:last-child { border-bottom: none; }
   .hero-notebook-row .v { font-size: 11px; font-weight: 700; color: var(--muted-dim); width: 28px; }
   .hero-notebook-row .txt { color: var(--muted); flex: 1; }
-  .hero-notebook-row.wrong .txt { text-decoration: line-through; text-decoration-color: var(--danger); font-family: 'Caveat', cursive; font-size: 1.15rem; color: var(--danger); }
+  .hero-notebook-row.wrong .txt { text-decoration: line-through; text-decoration-color: var(--danger); font-family: 'Caveat', cursive; font-size: 1.25rem; color: var(--danger); }
   .hero-notebook-row .mark.no { color: var(--danger); font-weight: 800; }
   .hero-notebook-row .mark.yes { color: var(--signal-bright); font-weight: 800; }
 
   noscript .hero-notebook {
     max-height: none;
-    margin-top: 14px;
-    margin-bottom: 18px;
-    padding: 10px 16px;
+    margin-top: 16px;
+    margin-bottom: 22px;
+    padding: 14px 20px;
   }
 
   .hero .sub {
-    font-size: clamp(0.92rem, 1.6vw, 1.04rem);
-    line-height: 1.65;
+    font-size: clamp(1.02rem, 1.35vw, 1.14rem);
+    line-height: 1.68;
     color: var(--muted);
-    max-width: 52ch;
-    margin-bottom: 24px;
+    max-width: 50ch;
+    margin-bottom: 28px;
   }
 
   .hero-actions {
@@ -542,7 +543,7 @@
     align-items: center;
     justify-content: center;
     gap: 8px;
-    font-size: 0.85rem;
+    font-size: 0.92rem;
     font-weight: 700;
     background: rgba(255, 255, 255, 0.08);
     color: #fff;
@@ -550,7 +551,7 @@
     box-shadow: var(--glass-specular), 0 8px 22px rgba(0,0,0,0.35);
     backdrop-filter: var(--glass-blur);
     -webkit-backdrop-filter: var(--glass-blur);
-    padding: 11px 24px;
+    padding: 13px 28px;
     border-radius: 999px;
     transition: all .2s cubic-bezier(0.16, 1, 0.3, 1);
   }
@@ -560,62 +561,69 @@
     transform: translateY(-2px);
   }
 
-  /* Hero Evidence Preview Card */
+  .hero-visual {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   .hero-evidence-card {
     background: var(--glass-subtle);
     border: 1px solid var(--glass-border-bright);
-    border-radius: 12px;
-    padding: 18px;
+    border-radius: 14px;
+    padding: clamp(20px, 2.4vw, 26px);
     backdrop-filter: var(--glass-blur);
     -webkit-backdrop-filter: var(--glass-blur);
-    box-shadow: var(--glass-specular), var(--glass-shadow);
+    box-shadow: var(--glass-specular), 0 24px 54px -12px rgba(0, 0, 0, 0.75);
     width: 100%;
+    max-width: 560px;
   }
   .he-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid rgba(255,255,255,0.08);
-    padding-bottom: 10px;
-    margin-bottom: 14px;
+    padding-bottom: 12px;
+    margin-bottom: 16px;
   }
   .he-tag {
-    font-size: 0.68rem;
+    font-size: 0.74rem;
     font-weight: 800;
     letter-spacing: 0.12em;
     color: var(--signal-bright);
     text-transform: uppercase;
   }
   .he-indicator {
-    font-size: 0.68rem;
+    font-size: 0.74rem;
     color: var(--brass);
     background: var(--brass-dim);
     border: 1px solid var(--brass-border);
-    padding: 2px 8px;
+    padding: 4px 11px;
     border-radius: 999px;
     font-weight: 700;
   }
   .he-img-wrap {
     width: 100%;
-    border-radius: 8px;
+    border-radius: 10px;
     overflow: hidden;
     position: relative;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.12);
     background: #090E16;
     cursor: zoom-in;
+    box-shadow: inset 0 1px 1px rgba(255,255,255,0.1);
   }
   .he-img-wrap img {
     width: 100%;
     height: auto;
     display: block;
-    transition: transform .25s ease;
+    transition: transform .28s cubic-bezier(0.16, 1, 0.3, 1);
   }
-  .he-img-wrap:hover img { transform: scale(1.02); }
+  .he-img-wrap:hover img { transform: scale(1.025); }
   .he-caption {
     font-family: 'Caveat', cursive;
-    font-size: 1.15rem;
+    font-size: 1.32rem;
     color: var(--brass);
-    margin-top: 12px;
+    margin-top: 15px;
     line-height: 1.35;
     text-align: center;
   }
@@ -944,11 +952,17 @@
   .case-question { font-size: 0.95rem; font-weight: 600; color: var(--white); line-height: 1.45; margin-bottom: 10px; }
   .work-body .hook { font-size: 0.88rem; color: var(--muted); line-height: 1.55; margin-bottom: 20px; }
 
+  /* Spacing buffer between Decision Moment card and CTA buttons */
+  .work-card .micro-decision {
+    margin-bottom: 6px;
+  }
+
   .work-links-row {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
-    margin-top: auto;
+    align-items: center;
+    gap: 12px;
+    margin-top: clamp(24px, 3vw, 34px);
   }
   .decision-toggle {
     font-size: 0.8rem;
@@ -987,7 +1001,7 @@
   }
   .decision-row.kept strong { color: var(--signal-bright); }
 
-  /* Ecosystem Rigor: Metric Taxonomy Badges (Observed vs Modeled) */
+  /* Metric Taxonomy Badges */
   .metric-status-pill {
     display: inline-flex;
     align-items: center;
@@ -1004,6 +1018,11 @@
   .badge-modeled {
     background: rgba(199, 158, 67, 0.12);
     border: 1px solid rgba(199, 158, 67, 0.35);
+    color: var(--brass);
+  }
+  .badge-calibrated {
+    background: rgba(199, 158, 67, 0.16);
+    border: 1px solid rgba(199, 158, 67, 0.45);
     color: var(--brass);
   }
   .badge-observed {
@@ -1881,6 +1900,7 @@
                 <p class="micro-reveal"></p>
               </div>
 
+              <!-- CTA Buttons Row with Dedicated Breathing Room -->
               <div class="work-links-row">
                 <a class="btn-apple" href="https://avinash0431.github.io/Glide/" target="_blank" rel="noopener">Enter full case study ↗</a>
                 <button type="button" class="decision-toggle" data-action="toggle-panel" data-target="panel-glide">See the investigation</button>
@@ -1902,7 +1922,10 @@
                   </div>
                   <div class="decision-row">
                     <strong>Engine Trade-off</strong>
-                    Incurred 320ms higher initial cart initialization latency in exchange for eliminating downstream post-booking visa cancellations.
+                    <div style="margin-top:4px;">
+                      <span class="metric-status-pill badge-observed">Observed Gateway Benchmark (+320ms p95)</span>
+                      <span>Incurred 320ms added p95 cart initialization latency during embassy API handshake checks in exchange for eliminating post-checkout visa rejections.</span>
+                    </div>
                   </div>
                   <div class="decision-row">
                     <strong>Outcome Taxonomy</strong>
@@ -1949,6 +1972,7 @@
                 <p class="micro-reveal"></p>
               </div>
 
+              <!-- CTA Buttons Row with Dedicated Breathing Room -->
               <div class="work-links-row">
                 <a class="btn-apple" href="https://avinash0431.github.io/careeros/" target="_blank" rel="noopener">Enter full case study ↗</a>
                 <button type="button" class="decision-toggle" data-action="toggle-panel" data-target="panel-career">See the investigation</button>
@@ -2002,7 +2026,7 @@
       </div>
 
       <div class="lib-grid" id="explorationsGrid">
-        <!-- Card 1 (Visible) -->
+        <!-- Card 1 -->
         <div class="lib-card">
           <div class="lib-card-head"><span class="lib-case-num">Case 01 · EdTech</span><span class="lib-brand">Prism</span></div>
           <h3>Reimagining STEM Learning</h3>
@@ -2011,7 +2035,7 @@
           <div class="lib-card-writeup"><a href="https://spark-split-808.notion.site/Prism-Reimagining-Practical-STEM-Learning-Through-Immersive-Classrooms-3931d93326e981e783e5c7ed1ed617d8" target="_blank" rel="noopener">Open Teardown ↗</a></div>
         </div>
 
-        <!-- Card 2 (Visible) -->
+        <!-- Card 2 -->
         <div class="lib-card">
           <div class="lib-card-head"><span class="lib-case-num">Case 02 · Social Graph</span><span class="lib-brand">Connections</span></div>
           <h3>High-Signal Networking</h3>
@@ -2020,7 +2044,7 @@
           <div class="lib-card-writeup"><a href="https://spark-split-808.notion.site/Beyond-Connections-3931d93326e981a79e91f4a13ae52cf7" target="_blank" rel="noopener">Open Teardown ↗</a></div>
         </div>
 
-        <!-- Card 3 (Visible) -->
+        <!-- Card 3 -->
         <div class="lib-card">
           <div class="lib-card-head"><span class="lib-case-num">Case 03 · Analytics</span><span class="lib-brand">Signal</span></div>
           <h3>Signals Over Noise</h3>
@@ -2029,7 +2053,7 @@
           <div class="lib-card-writeup"><a href="https://spark-split-808.notion.site/Signals-Over-Noise-3931d93326e9810c90dae86db002cc51" target="_blank" rel="noopener">Open Teardown ↗</a></div>
         </div>
 
-        <!-- Card 4 (Visible by Default) -->
+        <!-- Card 4 -->
         <div class="lib-card">
           <div class="lib-card-head"><span class="lib-case-num">Case 04 · Monetization</span><span class="lib-brand">Pulse</span></div>
           <h3>Trust Before Monetization</h3>
@@ -2038,7 +2062,7 @@
           <div class="lib-card-writeup"><a href="https://spark-split-808.notion.site/Trust-Before-Revenue-3931d93326e981af9a92eff02c5c626a" target="_blank" rel="noopener">Open Teardown ↗</a></div>
         </div>
 
-        <!-- Remaining 3 Archive Teardowns -->
+        <!-- Archived Teardowns (3) -->
         <div class="lib-card is-archived" data-archive-card>
           <div class="lib-card-head"><span class="lib-case-num">Case 05 · Habit Loop</span><span class="lib-brand">Catalyst</span></div>
           <h3>Designing for the Second Session</h3>
@@ -2435,7 +2459,7 @@ const DecisionJournal = (function() {
 
   // Session-persistent state store & rich telemetry schema
   const state = {
-    pageVersion: '3.4.0',
+    pageVersion: '3.5.0',
     sessionId: 'thinking_sess_' + Math.random().toString(36).substring(2, 9),
     sessionStartTime: Date.now(),
     eventSequence: 0,
@@ -2846,9 +2870,9 @@ const DecisionJournal = (function() {
       assert(`Decision log status badge exists: badge-${m.id}`, !!badge);
     });
 
-    // 4. Metric Taxonomy Status Badges Present
+    // 4. Metric Taxonomy Status Badges (Calibrated / Observed / Modeled)
     const metricPills = document.querySelectorAll('.metric-status-pill');
-    assert('Empirical/Modeled metric taxonomy pills present', metricPills.length >= 3, `Found ${metricPills.length}`);
+    assert('Comprehensive metric taxonomy status pills present (>= 4)', metricPills.length >= 4, `Found ${metricPills.length}`);
 
     // 5. Unique IDs in DOM
     const allIds = Array.from(document.querySelectorAll('[id]')).map(el => el.id);
