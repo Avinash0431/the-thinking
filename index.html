@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>Beyond My Resume | Avinash R, Product Manager</title>
-<meta name="description" content="Product Manager who finds the real bottleneck, not the obvious one. This site documents the decisions behind Glide, CareerOS, and independent strategy explorations.">
-<meta property="og:title" content="Beyond My Resume | Avinash R, Product Manager">
+<title>The Thinking | Avinash R, Product Manager</title>
+<meta name="description" content="Product Manager who finds the real bottleneck, not the obvious one. A product decision journal documenting trade-offs, hypotheses, and failure post-mortems behind Glide, CareerOS, and strategy explorations.">
+<meta property="og:title" content="The Thinking | Avinash R, Product Manager">
 <meta property="og:description" content="A product decision journal documenting trade-offs, falsified hypotheses, and failure post-mortems.">
 <meta property="og:type" content="website">
 
-<!-- Webfonts: Identical font family stack from The Evidence -->
+<!-- Webfonts: Identical font family stack across the ecosystem -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -21,7 +21,7 @@
     --ink-850: #101622;
     --ink-800: #151E2E;
 
-    /* Surface Hierarchy (Shared with The Evidence) */
+    /* Surface Hierarchy (Shared with The Evidence & Hub) */
     --surface-flat: #0E1420;
     --glass-subtle: rgba(16, 23, 36, 0.72);
     --glass-active: rgba(22, 33, 52, 0.88);
@@ -126,7 +126,7 @@
   .eyebrow-brass { color: var(--brass); }
 
   /* ========================================================
-     HEADER & FLOATING NAVIGATION (Matching The Evidence)
+     HEADER & FLOATING NAVIGATION
   ======================================================== */
   header {
     position: fixed;
@@ -180,7 +180,7 @@
     text-transform: uppercase;
   }
 
-  /* Desktop Nav Links (Centered, Single Linear Row) */
+  /* Desktop Nav Links */
   nav.links {
     display: flex;
     align-items: center;
@@ -322,7 +322,7 @@
   }
 
   /* ========================================================
-     01: HERO SECTION (Exact Hero Canvas From The Evidence)
+     01: HERO SECTION
   ======================================================== */
   .hero {
     position: relative;
@@ -371,12 +371,12 @@
     .hero-grid { grid-template-columns: 1.18fr 0.82fr; gap: 46px; }
   }
 
-  /* Ecosystem Flow Pill Tag: Exact spec from The Evidence */
+  /* Ecosystem Flow Pill Tag: Links to Hub and The Evidence */
   .ecosystem-flow-tag {
     display: inline-flex;
     align-items: center;
     flex-wrap: wrap;
-    gap: 6px;
+    gap: 8px;
     font-size: 0.69rem;
     font-weight: 800;
     letter-spacing: 0.06em;
@@ -392,6 +392,13 @@
     margin-bottom: 18px;
     max-width: 100%;
     line-height: 1.35;
+  }
+  .ecosystem-flow-tag a {
+    color: var(--white);
+    transition: color .2s;
+  }
+  .ecosystem-flow-tag a:hover {
+    color: var(--signal-bright);
   }
   .ecosystem-flow-tag span.active-node {
     color: var(--signal-bright);
@@ -957,7 +964,7 @@
   .decision-row.kept strong { color: var(--signal-bright); }
 
   /* ========================================================
-     04: STRATEGY EXPLORATIONS (4 Top Teardowns + 3 Archive)
+     04: STRATEGY EXPLORATIONS
   ======================================================== */
   .library-sec {
     background: var(--paper-bg);
@@ -1123,7 +1130,6 @@
 
   /* ========================================================
      06: THE UNCOMFORTABLE PART / FAILURES (Paper Canvas)
-     [POSITIONED BEFORE DECISION MOMENTS]
   ======================================================== */
   .failures-sec {
     background: var(--paper-bg);
@@ -1214,7 +1220,6 @@
 
   /* ========================================================
      07: DECISION MOMENTS / EXPERIMENT (Quiet Dark Canvas)
-     [POSITIONED JUST ABOVE HIRING NOTES]
   ======================================================== */
   .decisions-sec {
     background: var(--ink-900);
@@ -1333,7 +1338,7 @@
   }
 
   /* ========================================================
-     08: HIRING NOTES (Paper Canvas · 30-Sec Executive Recap)
+     08: HIRING NOTES (Paper Canvas)
   ======================================================== */
   .notes-sec {
     background: var(--paper-bg);
@@ -1437,7 +1442,7 @@
 
   .ecosystem-rail {
     display: grid;
-    grid-template-columns: 1fr auto 1.25fr auto 1.1fr auto 1fr;
+    grid-template-columns: 1.15fr auto 1.25fr auto 1.15fr auto 1fr;
     align-items: center;
     gap: 8px;
     margin: 32px 0 46px;
@@ -1456,6 +1461,12 @@
     display: flex;
     flex-direction: column;
     gap: 2px;
+    transition: all .2s ease;
+  }
+  .ecosystem-node:hover:not(.active) {
+    border-color: rgba(34, 181, 155, 0.4);
+    background: rgba(34, 181, 155, 0.05);
+    transform: translateY(-2px);
   }
   .ecosystem-node.active {
     border-color: var(--signal-bright);
@@ -1534,7 +1545,7 @@
     color: var(--muted-dim);
   }
 
-  /* Lightbox Modal (Focus-Trapped with Explicit Close Button) */
+  /* Lightbox Modal */
   .evidence-lightbox {
     position: fixed;
     inset: 0;
@@ -1570,10 +1581,10 @@
 </head>
 <body id="top">
 
-<!-- FIXED FLOATING HEADER (Linear Flow: Premise · Approach · Work · Lessons · Decisions · Next) -->
+<!-- FIXED FLOATING HEADER -->
 <header>
   <div class="navrow">
-    <a href="#home" class="mark">Beyond <span class="r">My Resume.</span><small>Product Decision Journal</small></a>
+    <a href="#home" class="mark">The <span class="r">Thinking.</span><small>Product Decision Journal</small></a>
     
     <nav class="links" id="navlinks" aria-label="Main Navigation">
       <a href="#home" class="active" data-section="home">Premise</a>
@@ -1585,7 +1596,7 @@
     </nav>
 
     <div class="header-tagline">
-      One candidate · Three lenses
+      One candidate · What sits behind
     </div>
 
     <button type="button" class="hamburger-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobileMenuDrawer">
@@ -1605,14 +1616,14 @@
       <a href="#next-step" data-section="next-step" data-nav-link>Next</a>
     </nav>
     <div class="mobile-drawer-tagline">
-      One candidate · Three lenses
+      One candidate · What sits behind
     </div>
   </div>
 </header>
 
 <main>
   <!-- ========================================================
-     01: HERO SECTION (Exact Hero Canvas From The Evidence)
+     01: HERO SECTION
   ======================================================== -->
   <section class="hero" id="home">
     <div class="hero-backdrop-photo"></div>
@@ -1620,9 +1631,9 @@
     <div class="wrap">
       <div class="hero-grid">
         <div>
-          <!-- Ecosystem Flow Pill Tag: Identical spec to reference image -->
+          <!-- Ecosystem Flow Pill Tag: Seamless links to Entry Door Hub & Sister Site -->
           <div class="ecosystem-flow-tag">
-            <span>Resume</span> › <span class="active-node">Beyond My Resume</span> › <span>The Evidence</span>
+            <a href="https://avinash0431.github.io/">Beyond My Resume (Hub)</a> › <span class="active-node">The Thinking</span> › <a href="https://avinash0431.github.io/the-evidence/" target="_blank" rel="noopener">The Evidence ↗</a>
           </div>
 
           <!-- 4-Line Narrative Thesis -->
@@ -1877,14 +1888,14 @@
   </section>
 
   <!-- ========================================================
-     04: STRATEGY EXPLORATIONS (4 Top Teardowns + 3 Archive)
+     04: STRATEGY EXPLORATIONS
   ======================================================== -->
   <section class="library-sec" id="explorations">
     <div class="wrap">
       <span class="eyebrow eyebrow-deep">Independent Thinking</span>
       <h2>Independent product explorations.</h2>
       <div class="lib-disclaimer">
-        <strong>Self-directed product teardowns:</strong> Short decision exercises exploring unfamiliar problem spaces. These show how I reason through constraints and are distinct from my commercial engineering work documented on <a href="https://avinash0431.github.io/the-evidence/" style="text-decoration: underline;">The Evidence</a>.
+        <strong>Self-directed product teardowns:</strong> Short decision exercises exploring unfamiliar problem spaces. These show how I reason through constraints and are distinct from my commercial engineering work documented on <a href="https://avinash0431.github.io/the-evidence/" target="_blank" rel="noopener" style="text-decoration: underline;">The Evidence</a>.
       </div>
 
       <div class="lib-grid" id="explorationsGrid">
@@ -2009,7 +2020,6 @@
 
   <!-- ========================================================
      06: THE UNCOMFORTABLE PART / FAILURES (Paper Canvas)
-     [POSITIONED BEFORE DECISION MOMENTS]
   ======================================================== -->
   <section class="failures-sec" id="failures">
     <div class="wrap">
@@ -2062,7 +2072,6 @@
 
   <!-- ========================================================
      07: DECISION MOMENTS / EXPERIMENT (Quiet Dark Canvas)
-     [POSITIONED JUST ABOVE HIRING NOTES]
   ======================================================== -->
   <section class="decisions-sec" id="decisions">
     <div class="wrap">
@@ -2169,7 +2178,7 @@
         </div>
       </div>
 
-      <!-- Executive Callout: Contextual Observation -->
+      <!-- Executive Callout -->
       <div class="notes-takeaway-card">
         <span class="takeaway-label">The Signal I'd Carry Into An Interview</span>
         <p class="takeaway-quote">"Most useful when the problem is ambiguous, the obvious solution is tempting, and the team needs someone to turn uncertainty into a decision."</p>
@@ -2188,29 +2197,30 @@
           <h2>You've seen the thinking.<br><span>Now see how it held up in production.</span></h2>
         </div>
         <div class="next-step-copy">
-          <p><strong>Resume</strong> documents career roles. <strong>Beyond My Resume</strong> shows how I think about decisions. <strong>The Evidence</strong> shows what happened when that thinking met real constraints across 12 evidence stories.</p>
+          <p><strong>Beyond My Resume</strong> is the entry hub. <strong>The Thinking</strong> shows how I reason through product decisions and hypotheses. <strong>The Evidence</strong> shows what happened when that thinking met real constraints across 12 production stories.</p>
           <a class="btn-apple" href="https://avinash0431.github.io/the-evidence/" target="_blank" rel="noopener">Read The Evidence ↗</a>
         </div>
       </div>
 
+      <!-- Interlinked Ecosystem Rail -->
       <div class="ecosystem-rail" aria-label="Ecosystem map">
-        <div class="ecosystem-node">
+        <a href="https://avinash0431.github.io/" class="ecosystem-node" aria-label="Return to Beyond My Resume Hub">
           <span class="ecosystem-index">01</span>
-          <strong>Resume</strong>
-          <span>What I did</span>
-        </div>
-        <div class="ecosystem-arrow">→</div>
-        <div class="ecosystem-node active">
-          <span class="ecosystem-index">02</span>
           <strong>Beyond My Resume</strong>
+          <span>The Entry Door ↗</span>
+        </a>
+        <div class="ecosystem-arrow">→</div>
+        <div class="ecosystem-node active" aria-current="page">
+          <span class="ecosystem-index">02</span>
+          <strong>The Thinking</strong>
           <span>How I think</span>
         </div>
         <div class="ecosystem-arrow">→</div>
-        <div class="ecosystem-node">
+        <a href="https://avinash0431.github.io/the-evidence/" target="_blank" rel="noopener" class="ecosystem-node" aria-label="Read The Evidence">
           <span class="ecosystem-index">03</span>
           <strong>The Evidence</strong>
-          <span>How it held up</span>
-        </div>
+          <span>How it held up ↗</span>
+        </a>
         <div class="ecosystem-arrow">→</div>
         <div class="ecosystem-node">
           <span class="ecosystem-index">04</span>
@@ -2227,7 +2237,6 @@
           <p class="talk-close">The useful next step is a real product conversation.</p>
         </div>
 
-        <!-- Notebook Card: Cleaned and focused on 'Bring A Problem' -->
         <div class="talk-notebook">
           <span class="talk-page-label">Bring A Problem</span>
           <p class="talk-quote">"I care about finding the real bottleneck before building. If that fits your team, let's talk."</p>
@@ -2285,7 +2294,7 @@
   </div>
 </footer>
 
-<!-- Lightbox Modal (Focus-Trapped with Explicit Close Button) -->
+<!-- Lightbox Modal -->
 <div class="evidence-lightbox" id="evidenceLightbox" data-action="close-lightbox" role="dialog" aria-modal="true" aria-label="Evidence artifact preview" tabindex="-1">
   <button type="button" class="lightbox-close-btn" data-action="close-lightbox" aria-label="Close image preview">✕ Close</button>
   <img src="glide-decision-evidence.png" alt="Decision Evidence, Case 001, Glide, full size inspection" loading="lazy">
@@ -2299,7 +2308,7 @@
 const DecisionJournal = (function() {
   'use strict';
 
-  // Canonical 5-Moment Data Structure (Single Source of Truth)
+  // Canonical 5-Moment Data Structure
   const canonicalMoments = [
     { id: 'moment-01', name: 'Framework Discipline', section: 'Approach', elementId: 'micro-framework' },
     { id: 'moment-02', name: 'Glide Architecture Pivot', section: 'Cases', elementId: 'micro-glide' },
@@ -2308,7 +2317,7 @@ const DecisionJournal = (function() {
     { id: 'moment-05', name: 'Post-Mortem Cost Triage', section: 'Lessons', elementId: 'micro-triage' }
   ];
 
-  // Complete page section map linking every DOM container to its linear nav target
+  // Complete page section map linking DOM containers to linear nav targets
   const sectionNavMap = [
     { sectionId: 'home', navId: 'home' },
     { sectionId: 'thinking', navId: 'thinking' },
@@ -2324,7 +2333,7 @@ const DecisionJournal = (function() {
   // Session-persistent state store & rich telemetry schema
   const state = {
     pageVersion: '3.2.0',
-    sessionId: 'bmr_sess_' + Math.random().toString(36).substring(2, 9),
+    sessionId: 'thinking_sess_' + Math.random().toString(36).substring(2, 9),
     sessionStartTime: Date.now(),
     eventSequence: 0,
     telemetryEvents: [],
@@ -2349,13 +2358,12 @@ const DecisionJournal = (function() {
 
   function restoreSessionData() {
     try {
-      const stored = sessionStorage.getItem('bmr_session_decisions');
+      const stored = sessionStorage.getItem('thinking_session_decisions') || sessionStorage.getItem('bmr_session_decisions');
       if (stored) {
         state.evaluatedMoments = JSON.parse(stored);
         Object.keys(state.evaluatedMoments).forEach(id => {
           const record = state.evaluatedMoments[id];
           updateDecisionLogUI(id, record.isMatch);
-          // Restore visual picked states in DOM
           const container = document.querySelector(`[data-question-id="${id}"]`);
           if (container) {
             const btn = container.querySelector(`[data-choice="${record.chosen}"]`);
@@ -2389,8 +2397,8 @@ const DecisionJournal = (function() {
 
     state.telemetryEvents.push(event);
     try {
-      sessionStorage.setItem('bmr_session_telemetry', JSON.stringify(state.telemetryEvents));
-      sessionStorage.setItem('bmr_session_decisions', JSON.stringify(state.evaluatedMoments));
+      sessionStorage.setItem('thinking_session_telemetry', JSON.stringify(state.telemetryEvents));
+      sessionStorage.setItem('thinking_session_decisions', JSON.stringify(state.evaluatedMoments));
     } catch (e) {
       // Storage safety
     }
@@ -2399,7 +2407,6 @@ const DecisionJournal = (function() {
   function bindEvents() {
     document.addEventListener('click', handleClicks);
 
-    // Modal keyboard trap & escape
     document.addEventListener('keydown', (e) => {
       const lb = document.getElementById('evidenceLightbox');
       if (!lb || !lb.classList.contains('open')) return;
@@ -2409,7 +2416,6 @@ const DecisionJournal = (function() {
         return;
       }
 
-      // Circular focus trap inside modal
       if (e.key === 'Tab') {
         const focusables = Array.from(lb.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'));
         if (focusables.length === 0) {
@@ -2660,19 +2666,16 @@ const DecisionJournal = (function() {
       document.body.clientHeight, document.documentElement.clientHeight
     );
 
-    // 1. Bottom of page clamp: guarantees Next is active when reading footer or end rail
     if (scrollY + winHeight >= docHeight - 90) {
       setActiveNav('next-step');
       return;
     }
 
-    // 2. Top of page clamp: guarantees Premise is active near top
     if (scrollY < 120) {
       setActiveNav('home');
       return;
     }
 
-    // 3. Scan sections sequentially from top to bottom
     const triggerLine = Math.min(220, winHeight * 0.32);
     let activeNav = 'home';
 
@@ -2715,35 +2718,30 @@ const DecisionJournal = (function() {
     });
   }
 
-  // Dynamic Automated Console QA Suite
+  // Dynamic Console QA Suite
   function runConsoleQA() {
     const assertions = [];
     function assert(name, condition, details = '') {
       assertions.push({ name, passed: Boolean(condition), details });
     }
 
-    // 1. Canonical Moments in DOM
     canonicalMoments.forEach(m => {
       const el = document.getElementById(m.elementId);
       assert(`Canonical moment DOM node exists: ${m.id}`, !!el);
     });
 
-    // 2. Decision Log Status Badges
     canonicalMoments.forEach(m => {
       const badge = document.getElementById(`badge-${m.id}`);
       assert(`Decision log status badge exists: badge-${m.id}`, !!badge);
     });
 
-    // 3. Unique IDs in DOM
     const allIds = Array.from(document.querySelectorAll('[id]')).map(el => el.id);
     const duplicateIds = allIds.filter((id, idx) => allIds.indexOf(id) !== idx);
     assert(`All DOM IDs are unique (0 duplicates)`, duplicateIds.length === 0, duplicateIds.join(', '));
 
-    // 4. Zero Inline Handlers
     const inlineHandlerCount = document.querySelectorAll('[onclick], [onkeydown], [onkeyup], [onchange]').length;
     assert(`Zero inline event attributes in HTML`, inlineHandlerCount === 0, `${inlineHandlerCount} found`);
 
-    // 5. Internal Anchor Target Resolution
     const internalAnchors = Array.from(document.querySelectorAll('a[href^="#"]'));
     const brokenAnchors = internalAnchors.filter(a => {
       const href = a.getAttribute('href');
@@ -2751,29 +2749,24 @@ const DecisionJournal = (function() {
     });
     assert(`Internal anchor href targets resolve`, brokenAnchors.length === 0, `${brokenAnchors.length} broken`);
 
-    // 6. Navigation Item Count
     const navItems = document.querySelectorAll('#navlinks a');
     assert(`Navigation contains exactly 6 streamlined destinations`, navItems.length === 6, `${navItems.length} items found`);
 
-    // 7. Lightbox Accessibility
     const lightbox = document.getElementById('evidenceLightbox');
     const hasDialogRole = lightbox && lightbox.getAttribute('role') === 'dialog';
     const hasModalAttr = lightbox && lightbox.getAttribute('aria-modal') === 'true';
     const hasCloseBtn = lightbox && !!lightbox.querySelector('button');
     assert(`Evidence lightbox modal accessibility (role=dialog, aria-modal=true, close-btn)`, hasDialogRole && hasModalAttr && hasCloseBtn);
 
-    // 8. Mobile Menu ARIA Controls
     const menuBtn = document.getElementById('mobileMenuBtn');
     assert(`Mobile menu button has valid aria-controls`, menuBtn && menuBtn.getAttribute('aria-controls') === 'mobileMenuDrawer');
 
-    // 9. Telemetry Store Initialized
     assert(`Session telemetry store initialized with valid schema`, Array.isArray(state.telemetryEvents) && typeof state.sessionId === 'string');
 
-    // Dynamically evaluated console output
     const passedCount = assertions.filter(a => a.passed).length;
     const allPassed = passedCount === assertions.length;
 
-    console.groupCollapsed(`%c[BMR Dynamic QA Suite]%c ${passedCount}/${assertions.length} Assertions Passed`,
+    console.groupCollapsed(`%c[The Thinking Dynamic QA Suite]%c ${passedCount}/${assertions.length} Assertions Passed`,
       allPassed ? 'color:#2DD4B4;font-weight:bold;' : 'color:#FF4D6D;font-weight:bold;',
       'color:#FAF9F6;'
     );
